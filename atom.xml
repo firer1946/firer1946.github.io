@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://firer1946.github.io</id>
     <title>firer</title>
-    <updated>2021-01-04T09:03:24.329Z</updated>
+    <updated>2021-01-04T09:48:47.737Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://firer1946.github.io"/>
     <link rel="self" href="https://firer1946.github.io/atom.xml"/>
@@ -16,34 +16,9 @@
         <link href="https://firer1946.github.io/post/calibre-web-de-bu-shu/">
         </link>
         <updated>2021-01-04T08:15:01.000Z</updated>
+        <summary type="html"><![CDATA[<p>最近开始准备书单开始读书，需要一个管理系统来管理书籍，看到这个效果还不错，也支持在线阅读和格式转换，可以说是相当完善了，发送到kindle的功能比较实用</p>
+]]></summary>
         <content type="html"><![CDATA[<p>最近开始准备书单开始读书，需要一个管理系统来管理书籍，看到这个效果还不错，也支持在线阅读和格式转换，可以说是相当完善了，发送到kindle的功能比较实用</p>
-<h1 id="docker-compose">docker-compose</h1>
-<p>找到<code>technosoft2000/calibre-web</code>的镜像并使用docker-compose进行部署</p>
-<pre><code class="language-yaml">version: &quot;3&quot;
-services:
-  calibre-web:
-    image: technosoft2000/calibre-web:latest
-    container_name: calibre_web
-    environment:
-      - APP_REPO=&quot;https://github.com/firer1946/calibre-web.git&quot;
-      - AMAZON_KG_URL=&quot;https://github.com/Technosoft2000/docker-calibre-web/releases/download/kindlegen/kindlegen_linux_2.6_i386_v2_9.tar.gz&quot;
-      - CALIBRE_INSTALLER_SOURCE_CODE_URL=&quot;https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py&quot;
-    volumes:
-      - {{calibre_web.config_dir}}:/config
-      - {{calibre_web.books_dir}}:/books
-    ports:
-      - {{calibre_web.port}}:8083
-    restart: unless-stopped
-
-</code></pre>
-<p>{{calibre_web.config_dir}}修改为自己的配置文件夹，需要权限修改为777，<code>chmod -R 777 &lt;文件夹&gt;</code>，不然无法上传书籍<br>
-{{calibre_web.books_dir}} 主要是存放书籍的目录<br>
-{{calibre_web.port}} 开放端口<br>
-网络不好的话最好把AMAZON_KG_URL，CALIBRE_INSTALLER_SOURCE_CODE_URL的文件手动下载下来，使用ansible部署还是比较方便的</p>
-<h1 id="中文化修改">中文化修改</h1>
-<p>通过technosoft2000的镜像部署下来发现<code>下载</code>和<code>推送到kindle</code>的中文书籍都是拼音，原来是存储的时候使用了拼音作为文件名，所以在下载和发邮件的部分做了一些魔改，具体修改见<a href="https://github.com/firer1946/calibre-web.git">仓库</a>,由于只是针对中文下的修改，所以就不提pr了</p>
-<p>效果如下:<br>
-<img src="https://firer1946.github.io/post-images/1609749387042.png" alt="" loading="lazy"></p>
 ]]></content>
     </entry>
     <entry>
@@ -52,8 +27,9 @@ services:
         <link href="https://firer1946.github.io/post/start/">
         </link>
         <updated>2021-01-04T08:08:35.000Z</updated>
-        <content type="html"><![CDATA[<p>2021，开始重新写blogs，简单记录一下，使用什么工具不重要，只要是快速开始写起来就很好，gridea还是比较方便的，相当于本地的静态站点生成器，同步到github pages 对应的仓库即可<br>
-<img src="https://firer1946.github.io/post-images/1609747839605.jpg" alt="" loading="lazy"></p>
+        <summary type="html"><![CDATA[<p>2021，开始重新写blogs，简单记录一下，使用什么工具不重要，只要是快速开始写起来就很好，gridea还是比较方便的，相当于本地的静态站点生成器，同步到github pages 对应的仓库即可</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>2021，开始重新写blogs，简单记录一下，使用什么工具不重要，只要是快速开始写起来就很好，gridea还是比较方便的，相当于本地的静态站点生成器，同步到github pages 对应的仓库即可</p>
 ]]></content>
     </entry>
 </feed>
