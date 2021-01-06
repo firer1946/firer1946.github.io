@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://firer1946.github.io</id>
     <title>firer</title>
-    <updated>2021-01-06T06:32:12.289Z</updated>
+    <updated>2021-01-06T06:32:59.147Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://firer1946.github.io"/>
     <link rel="self" href="https://firer1946.github.io/atom.xml"/>
@@ -16,6 +16,10 @@
         <link href="https://firer1946.github.io/post/ventoy-iso-qi-dong/">
         </link>
         <updated>2021-01-06T06:29:49.000Z</updated>
+        <summary type="html"><![CDATA[<p>这个工具写入u盘后可以直接启动iso镜像，以后就不用反复地格盘了，平时也可以正常当u盘使用，配合wepe工具箱应该很不错</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>这个工具写入u盘后可以直接启动iso镜像，以后就不用反复地格盘了，平时也可以正常当u盘使用，配合wepe工具箱应该很不错</p>
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[calibre-web的部署]]></title>
