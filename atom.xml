@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://firer1946.github.io</id>
     <title>firer</title>
-    <updated>2021-01-06T06:51:50.463Z</updated>
+    <updated>2021-01-06T07:02:39.070Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://firer1946.github.io"/>
     <link rel="self" href="https://firer1946.github.io/atom.xml"/>
@@ -19,6 +19,10 @@
         <summary type="html"><![CDATA[<p>之前统计系统到需要亿级的用户设备id去重，统计新增用户，直接使用clickhouse join由于笛卡尔积的原因导致效率偏低，早有听闻hbase rowkey的效率比较高，就想到了使用它来进行去重，把需要去重的键值连起来，每条数据查重理论上复杂度为1，当成一个比较大的redis来使用。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>之前统计系统到需要亿级的用户设备id去重，统计新增用户，直接使用clickhouse join由于笛卡尔积的原因导致效率偏低，早有听闻hbase rowkey的效率比较高，就想到了使用它来进行去重，把需要去重的键值连起来，每条数据查重理论上复杂度为1，当成一个比较大的redis来使用。</p>
+<!-- more -->
+<p>使用起来效果非常惊人，<code>Result[] get(List&lt;Get&gt; var1)</code>这个函数提供了大量rowkey的查询，10万条数据几乎不到1s的时间，使用java进行求差集的效率也很不错，整体每天的数据批量去重只需要几秒钟就能完成</p>
+<p>如果时间差距过大，采取每天轮询的方式还是很不错的，保证每个批次的数据量不会太大，降低hbase的数据吞吐压力，曾经尝试每次查询200万的数据都是没有问题，只是数据传输的时间会长一些</p>
+<p>当然也可以用来redis来做这个处理，但是redis可能持久化存储这么多数据是一件比较麻烦的事情，而hbase本来就有海量存储的这个属性，不得不说比hive快了好多</p>
 ]]></content>
     </entry>
     <entry>
@@ -30,6 +34,8 @@
         <summary type="html"><![CDATA[<p>这个工具写入u盘后可以直接启动iso镜像，以后就不用反复地格盘了，平时也可以正常当u盘使用，配合wepe工具箱应该很不错</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>这个工具写入u盘后可以直接启动iso镜像，以后就不用反复地格盘了，平时也可以正常当u盘使用，配合wepe工具箱应该很不错</p>
+<!-- more -->
+<p>类似功能的听说还有yumi</p>
 ]]></content>
     </entry>
     <entry>
@@ -41,6 +47,34 @@
         <summary type="html"><![CDATA[<p>最近开始准备书单开始读书，需要一个管理系统来管理书籍，看到这个效果还不错，也支持在线阅读和格式转换，可以说是相当完善了，发送到kindle的功能比较实用</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>最近开始准备书单开始读书，需要一个管理系统来管理书籍，看到这个效果还不错，也支持在线阅读和格式转换，可以说是相当完善了，发送到kindle的功能比较实用</p>
+<!-- more -->
+<h1 id="docker-compose">docker-compose</h1>
+<p>找到<code>technosoft2000/calibre-web</code>的镜像并使用docker-compose进行部署</p>
+<pre><code>version: &quot;3&quot;
+services:
+  calibre-web:
+    image: technosoft2000/calibre-web:latest
+    container_name: calibre_web
+    environment:
+      - APP_REPO=&quot;https://github.com/firer1946/calibre-web.git&quot;
+      - AMAZON_KG_URL=&quot;https://github.com/Technosoft2000/docker-calibre-web/releases/download/kindlegen/kindlegen_linux_2.6_i386_v2_9.tar.gz&quot;
+      - CALIBRE_INSTALLER_SOURCE_CODE_URL=&quot;https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py&quot;
+    volumes:
+      - {{calibre_web.config_dir}}:/config
+      - {{calibre_web.books_dir}}:/books
+    ports:
+      - {{calibre_web.port}}:8083
+    restart: unless-stopped
+
+</code></pre>
+<p>{{calibre_web.config_dir}}修改为自己的配置文件夹，需要权限修改为777，<code>chmod -R 777 &lt;文件夹&gt;</code>，不然无法上传书籍<br>
+{{calibre_web.books_dir}} 主要是存放书籍的目录<br>
+{{calibre_web.port}} 开放端口<br>
+网络不好的话最好把AMAZON_KG_URL，CALIBRE_INSTALLER_SOURCE_CODE_URL的文件手动下载下来，使用ansible部署还是比较方便的</p>
+<h1 id="中文化修改">中文化修改</h1>
+<p>通过technosoft2000的镜像部署下来发现<code>下载</code>和<code>推送到kindle</code>的中文书籍都是拼音，原来是存储的时候使用了拼音作为文件名，所以在下载和发邮件的部分做了一些魔改，具体修改见<a href="https://github.com/firer1946/calibre-web.git">仓库</a>,由于只是针对中文下的修改，所以就不提pr了</p>
+<p>效果如下:<br>
+<img src="https://firer1946.github.io/post-images/1609749387042.png" alt="" loading="lazy"></p>
 ]]></content>
     </entry>
     <entry>
@@ -52,6 +86,8 @@
         <summary type="html"><![CDATA[<p>2021，开始重新写blogs，简单记录一下，使用什么工具不重要，只要是快速开始写起来就很好，gridea还是比较方便的，相当于本地的静态站点生成器，同步到github pages 对应的仓库即可</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>2021，开始重新写blogs，简单记录一下，使用什么工具不重要，只要是快速开始写起来就很好，gridea还是比较方便的，相当于本地的静态站点生成器，同步到github pages 对应的仓库即可</p>
+<!-- more -->
+<figure data-type="image" tabindex="1"><img src="https://firer1946.github.io/post-images/1609747839605.jpg" alt="" loading="lazy"></figure>
 ]]></content>
     </entry>
 </feed>
