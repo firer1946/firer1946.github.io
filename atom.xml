@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://firer1946.github.io</id>
     <title>firer</title>
-    <updated>2021-01-06T07:02:39.070Z</updated>
+    <updated>2021-01-12T06:26:54.576Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://firer1946.github.io"/>
     <link rel="self" href="https://firer1946.github.io/atom.xml"/>
@@ -10,6 +10,95 @@
     <logo>https://firer1946.github.io/images/avatar.png</logo>
     <icon>https://firer1946.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, firer</rights>
+    <entry>
+        <title type="html"><![CDATA[pyqt5 && python打包]]></title>
+        <id>https://firer1946.github.io/post/pyqt5-and-python-da-bao/</id>
+        <link href="https://firer1946.github.io/post/pyqt5-and-python-da-bao/">
+        </link>
+        <updated>2021-01-12T06:20:41.000Z</updated>
+        <summary type="html"><![CDATA[<p>最近需要给之前的命令行程序写一个界面，使用Qt-designer拖界面还是比较方便的，其中一个比较麻烦的问题就是实时输出日志的问题，直接使用<code>os.popen</code>会导致窗口进程直接卡死，需要使用qt提供的Qprocess来处理，然而最终还是有问题；才发现是python的缓存问题，直接运行可以使用<code>-u</code>解决，但是pyinstaller打包不支持unbuffered,最终使用了py2exe</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>最近需要给之前的命令行程序写一个界面，使用Qt-designer拖界面还是比较方便的，其中一个比较麻烦的问题就是实时输出日志的问题，直接使用<code>os.popen</code>会导致窗口进程直接卡死，需要使用qt提供的Qprocess来处理，然而最终还是有问题；才发现是python的缓存问题，直接运行可以使用<code>-u</code>解决，但是pyinstaller打包不支持unbuffered,最终使用了py2exe</p>
+<!-- more -->
+<h1 id="pyqt5">pyqt5</h1>
+<h2 id="高分屏支持">高分屏支持</h2>
+<pre><code class="language-python">os.environ[&quot;QT_AUTO_SCREEN_SCALE_FACTOR&quot;] = &quot;1&quot;
+</code></pre>
+<h2 id="qprocess子进程">Qprocess子进程</h2>
+<p>为了防止大批量的任务导致窗口进程卡死，需要使用qt实现的qprocess来调用，使用os.popen 和 subprocess都是会出问题的</p>
+<pre><code class="language-python">self.process = QtCore.QProcess()
+self.textEdit.clear()
+self.process.start(command)
+</code></pre>
+<h2 id="系统命令实时日志获取">系统命令实时日志获取</h2>
+<p>因为python缓冲区的问题，误以为是qt这部分的问题</p>
+<pre><code class="language-python"># process 部分
+self.process.readyRead.connect(self.dataReady)
+# 输出槽函数
+def dataReady(self):
+    cursor = self.textEdit.textCursor()
+    cursor.movePosition(cursor.End)
+    text = self.process.readAll()
+    cursor.insertText(str(text))
+    self.textEdit.ensureCursorVisible()
+    print(text)
+</code></pre>
+<h1 id="打包">打包</h1>
+<p>使用了好几个打包成exe的工具，发现基本都没办法很好的支持unbuffered，不关闭缓存就无法正常地实时获取运行的日志，pyinstaller, cxfreeze 直接打包还可以，但是不支持，还是py2exe好用</p>
+<h3 id="pyinstaller">pyinstaller</h3>
+<pre><code class="language-bash"># 其他程序没有二进制依赖可以不加--paths
+pyinstaller --paths C:\Users\firer\.virtualenvs\compress_images-8VD5V_Md\Lib\site-packages\PyQt5\Qt\bin -F -w .\image_compress_ui.py
+</code></pre>
+<h3 id="cxfreeze">cxfreeze</h3>
+<p>需要打包的文件夹创建<code>setup.py</code>（任意名字都可以）</p>
+<pre><code class="language-python">import sys
+from cx_Freeze import setup, Executable
+
+include_files = []
+
+build_exe_options = {'packages': ['PIL'],
+                     'excludes': [],
+                     'include_files':include_files
+                     }
+base = None
+if sys.platform == 'win32':
+  base = 'Win32GUI'
+ 
+setup(  name = 'imagesCompress',
+        version = '0.1',
+        description = '文件压缩',
+        options = {'build_exe': build_exe_options},
+        executables = [Executable('image_compress.py')])
+</code></pre>
+<p>然后执行 <code>python .\setup.py build</code></p>
+<h3 id="py2exe">py2exe</h3>
+<p>同cxfreeze</p>
+<pre><code class="language-python">import os
+from distutils.core import setup
+import py2exe
+
+Mydata_files = []
+# for files in os.listdir('C:/path/to/image/directory/'):
+#     f1 = 'C:/path/to/image/directory/' + files
+#     if os.path.isfile(f1): # skip directories
+#         f2 = 'images', [f1]
+#         Mydata_files.append(f2)
+
+setup(
+    console=['image_compress.py'],
+    data_files = [],
+    options={
+                &quot;py2exe&quot;:{
+                        &quot;unbuffered&quot;: True, # 这句很关键
+                        &quot;optimize&quot;: 2,
+                        &quot;excludes&quot;: []
+                }
+        }
+)
+</code></pre>
+<p>然后执行<code>python .\py2exe_setup.py py2exe</code>即可</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[超大量用户数据去重]]></title>
         <id>https://firer1946.github.io/post/chao-da-liang-yong-hu-shu-ju-qu-chong/</id>

@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>firer</title>
-<link rel="shortcut icon" href="https://firer1946.github.io/favicon.ico?v=1609916556677">
+<link rel="shortcut icon" href="https://firer1946.github.io/favicon.ico?v=1610432811607">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://firer1946.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="firer - Atom Feed" href="https://firer1946.github.io/atom.xml">
@@ -27,7 +27,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://firer1946.github.io">
-  <img class="avatar" src="https://firer1946.github.io/images/avatar.png?v=1609916556677" alt="">
+  <img class="avatar" src="https://firer1946.github.io/images/avatar.png?v=1610432811607" alt="">
   </a>
   <h1 class="site-title">
     firer
@@ -79,6 +79,26 @@
 
     
         <div class="post-container">
+  
+    <article class="post">
+      <a href="https://firer1946.github.io/post/pyqt5-and-python-da-bao/">
+        <h2 class="post-title">pyqt5 &amp;&amp; python打包</h2>
+      </a>
+      <div class="post-info">
+        <span>
+          2021-01-12
+        </span>
+        <span>
+          3 min read
+        </span>
+        
+      </div>
+      
+      <div class="post-abstract">
+        <p>最近需要给之前的命令行程序写一个界面，使用Qt-designer拖界面还是比较方便的，其中一个比较麻烦的问题就是实时输出日志的问题，直接使用<code>os.popen</code>会导致窗口进程直接卡死，需要使用qt提供的Qprocess来处理，然而最终还是有问题；才发现是python的缓存问题，直接运行可以使用<code>-u</code>解决，但是pyinstaller打包不支持unbuffered,最终使用了py2exe</p>
+
+      </div>
+    </article>
   
     <article class="post">
       <a href="https://firer1946.github.io/post/chao-da-liang-yong-hu-shu-ju-qu-chong/">
