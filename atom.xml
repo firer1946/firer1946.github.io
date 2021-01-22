@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://firer1946.github.io</id>
     <title>firer</title>
-    <updated>2021-01-12T06:39:44.403Z</updated>
+    <updated>2021-01-22T02:38:34.705Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://firer1946.github.io"/>
     <link rel="self" href="https://firer1946.github.io/atom.xml"/>
@@ -10,6 +10,39 @@
     <logo>https://firer1946.github.io/images/avatar.png</logo>
     <icon>https://firer1946.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, firer</rights>
+    <entry>
+        <title type="html"><![CDATA[junk软件隔离计划]]></title>
+        <id>https://firer1946.github.io/post/junk-ruan-jian-ge-chi-ji-hua/</id>
+        <link href="https://firer1946.github.io/post/junk-ruan-jian-ge-chi-ji-hua/">
+        </link>
+        <updated>2021-01-22T02:31:06.000Z</updated>
+        <summary type="html"><![CDATA[<p>由于最近qq扫描浏览器文件的问题，只能把这些不规矩的软件都请到虚拟机里边去了，包括深信服，深信服装个windows版的v2ray服务端映射出来即可</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>由于最近qq扫描浏览器文件的问题，只能把这些不规矩的软件都请到虚拟机里边去了，包括深信服，深信服装个windows版的v2ray服务端映射出来即可</p>
+<!-- more -->
+<h1 id="hyper-v虚拟机">hyper-v虚拟机</h1>
+<p>选择这个是因为性能够强，几乎能达到物理机的水平，内存分配1.5g，cpu 2核<br>
+把qq和微信直接扔进去耍就可以了,<strong>好处就是几乎不会关机</strong>,物理机关机只会挂起相当于睡眠<br>
+微信不用每次都重新登录</p>
+<h1 id="远程分辨率的问题">远程分辨率的问题</h1>
+<p>由于使用4k屏发现远程桌面不全屏缩放比例就不对了，找了半天终于找到了解决方案，虽然不知道具体原理，但是基本解决了问题，保持原始分辨率，虽然糊了点</p>
+<p>https://superuser.com/questions/1457955/remoteapp-doesnt-apply-correct-scaling-initially</p>
+<pre><code class="language-powershell">cd %systemroot%\system32
+copy mstsc.exe mstsc2.exe
+cd %systemroot%\system32\en-us\
+copy mstsc.exe.mui mstsc2.exe.mui
+
+# 修改注册表
+reg add &quot;HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers&quot; /t REG_SZ /v &quot;C:\Windows\System32\mstsc2.exe&quot; /d &quot;~ DPIUNAWARE&quot; /f
+</code></pre>
+<p>然后把rdp保存为配置文件运行即可</p>
+<figure data-type="image" tabindex="1"><img src="https://firer1946.github.io/post-images/1611282825649.png" alt="" loading="lazy"></figure>
+<pre><code class="language-powershell">mstsc2 xxx.rdp
+</code></pre>
+<h1 id="最终效果">最终效果</h1>
+<p>效果比想象地要好，几乎没有什么延迟</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[pyqt5 && python打包]]></title>
         <id>https://firer1946.github.io/post/pyqt5-and-python-da-bao/</id>

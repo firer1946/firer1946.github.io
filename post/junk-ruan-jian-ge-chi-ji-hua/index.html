@@ -2,11 +2,11 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>超大量用户数据去重 | firer</title>
+<title>junk软件隔离计划 | firer</title>
 <link rel="shortcut icon" href="https://firer1946.github.io/favicon.ico?v=1611283109819">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://firer1946.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="超大量用户数据去重 | firer - Atom Feed" href="https://firer1946.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="junk软件隔离计划 | firer - Atom Feed" href="https://firer1946.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
@@ -20,8 +20,11 @@
 </script>
 
 
-    <meta name="description" content="之前统计系统到需要亿级的用户设备id去重，统计新增用户，直接使用clickhouse join由于笛卡尔积的原因导致效率偏低，早有听闻hbase rowkey的效率比较高，就想到了使用它来进行去重，把需要去重的键值连起来，每条数据查重理论上..." />
-    <meta name="keywords" content="clickhouse,hadoop" />
+    <meta name="description" content="由于最近qq扫描浏览器文件的问题，只能把这些不规矩的软件都请到虚拟机里边去了，包括深信服，深信服装个windows版的v2ray服务端映射出来即可
+
+hyper-v虚拟机
+选择这个是因为性能够强，几乎能达到物理机的水平，内存分配1.5g，c..." />
+    <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -83,37 +86,52 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              超大量用户数据去重
+              junk软件隔离计划
             </h2>
             <div class="post-info">
               <span>
-                2021-01-06
+                2021-01-22
               </span>
               <span>
                 2 min read
               </span>
               
-                <a href="https://firer1946.github.io/tag/9ky_qtDUM/" class="post-tag">
-                  # clickhouse
-                </a>
-              
-                <a href="https://firer1946.github.io/tag/yzeZztaGr/" class="post-tag">
-                  # hadoop
-                </a>
-              
             </div>
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>之前统计系统到需要亿级的用户设备id去重，统计新增用户，直接使用clickhouse join由于笛卡尔积的原因导致效率偏低，早有听闻hbase rowkey的效率比较高，就想到了使用它来进行去重，把需要去重的键值连起来，每条数据查重理论上复杂度为1，当成一个比较大的redis来使用。</p>
+                <p>由于最近qq扫描浏览器文件的问题，只能把这些不规矩的软件都请到虚拟机里边去了，包括深信服，深信服装个windows版的v2ray服务端映射出来即可</p>
 <!-- more -->
-<p>使用起来效果非常惊人，<code>Result[] get(List&lt;Get&gt; var1)</code>这个函数提供了大量rowkey的查询，10万条数据几乎不到1s的时间，使用java进行求差集的效率也很不错，整体每天的数据批量去重只需要几秒钟就能完成</p>
-<p>如果时间差距过大，采取每天轮询的方式还是很不错的，保证每个批次的数据量不会太大，降低hbase的数据吞吐压力，曾经尝试每次查询200万的数据都是没有问题，只是数据传输的时间会长一些</p>
-<p>当然也可以用来redis来做这个处理，但是redis可能持久化存储这么多数据是一件比较麻烦的事情，而hbase本来就有海量存储的这个属性，不得不说比hive快了好多</p>
+<h1 id="hyper-v虚拟机">hyper-v虚拟机</h1>
+<p>选择这个是因为性能够强，几乎能达到物理机的水平，内存分配1.5g，cpu 2核<br>
+把qq和微信直接扔进去耍就可以了,<strong>好处就是几乎不会关机</strong>,物理机关机只会挂起相当于睡眠<br>
+微信不用每次都重新登录</p>
+<h1 id="远程分辨率的问题">远程分辨率的问题</h1>
+<p>由于使用4k屏发现远程桌面不全屏缩放比例就不对了，找了半天终于找到了解决方案，虽然不知道具体原理，但是基本解决了问题，保持原始分辨率，虽然糊了点</p>
+<p>https://superuser.com/questions/1457955/remoteapp-doesnt-apply-correct-scaling-initially</p>
+<pre><code class="language-powershell">cd %systemroot%\system32
+copy mstsc.exe mstsc2.exe
+cd %systemroot%\system32\en-us\
+copy mstsc.exe.mui mstsc2.exe.mui
+
+# 修改注册表
+reg add &quot;HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers&quot; /t REG_SZ /v &quot;C:\Windows\System32\mstsc2.exe&quot; /d &quot;~ DPIUNAWARE&quot; /f
+</code></pre>
+<p>然后把rdp保存为配置文件运行即可</p>
+<figure data-type="image" tabindex="1"><img src="https://firer1946.github.io/post-images/1611282825649.png" alt="" loading="lazy"></figure>
+<pre><code class="language-powershell">mstsc2 xxx.rdp
+</code></pre>
+<h1 id="最终效果">最终效果</h1>
+<p>效果比想象地要好，几乎没有什么延迟</p>
 
               </div>
               <div class="toc-container">
-                
+                <ul class="markdownIt-TOC">
+<li><a href="#hyper-v%E8%99%9A%E6%8B%9F%E6%9C%BA">hyper-v虚拟机</a></li>
+<li><a href="#%E8%BF%9C%E7%A8%8B%E5%88%86%E8%BE%A8%E7%8E%87%E7%9A%84%E9%97%AE%E9%A2%98">远程分辨率的问题</a></li>
+<li><a href="#%E6%9C%80%E7%BB%88%E6%95%88%E6%9E%9C">最终效果</a></li>
+</ul>
+
               </div>
             </div>
           </article>
@@ -122,9 +140,9 @@
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://firer1946.github.io/post/ventoy-iso-qi-dong/">
+            <a href="https://firer1946.github.io/post/pyqt5-and-python-da-bao/">
               <h3 class="post-title">
-                ventoy iso启动
+                pyqt5 &amp;&amp; python打包
               </h3>
             </a>
           </div>
