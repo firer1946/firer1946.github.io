@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://firer1946.github.io</id>
     <title>firer</title>
-    <updated>2021-01-22T02:45:22.108Z</updated>
+    <updated>2021-01-22T02:52:40.572Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://firer1946.github.io"/>
     <link rel="self" href="https://firer1946.github.io/atom.xml"/>
@@ -25,9 +25,9 @@
 把qq和微信直接扔进去耍就可以了,<strong>好处就是几乎不会关机</strong>,物理机关机只会挂起相当于睡眠<br>
 微信不用每次都重新登录</p>
 <h1 id="远程分辨率的问题">远程分辨率的问题</h1>
-<p>由于使用4k屏发现远程桌面不全屏缩放比例就不对了，找了半天终于找到了解决方案，虽然不知道具体原理，但是基本解决了问题，保持原始分辨率，虽然糊了点</p>
-<p>https://superuser.com/questions/1457955/remoteapp-doesnt-apply-correct-scaling-initially</p>
-<pre><code class="language-powershell">cd %systemroot%\system32
+<p>由于使用4k屏发现远程桌面不全屏缩放比例就不对了，找了半天终于找到了解决方案，虽然不知道具体原理，但是基本解决了问题，保持原始分辨率，虽然糊了点<br>
+<a href="https://superuser.com/questions/1457955/remoteapp-doesnt-apply-correct-scaling-initially">解决方案</a></p>
+<pre><code>cd %systemroot%\system32
 copy mstsc.exe mstsc2.exe
 cd %systemroot%\system32\en-us\
 copy mstsc.exe.mui mstsc2.exe.mui
@@ -37,7 +37,7 @@ reg add &quot;HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\L
 </code></pre>
 <p>然后把rdp保存为配置文件运行即可</p>
 <figure data-type="image" tabindex="1"><img src="https://firer1946.github.io/post-images/1611282825649.png" alt="" loading="lazy"></figure>
-<pre><code class="language-powershell">mstsc2 xxx.rdp
+<pre><code>mstsc2 xxx.rdp
 </code></pre>
 <h1 id="最终效果">最终效果</h1>
 <p>效果比想象地要好，几乎没有什么延迟</p>
