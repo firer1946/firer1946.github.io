@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>标签1 on Hadoken</title>
+    <link>https://firer1946.github.io/tags/%E6%A0%87%E7%AD%BE1/</link>
+    <description>Recent content in 标签1 on Hadoken</description>
+    <image>
+      <url>https://firer1946.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://firer1946.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 16 Dec 2021 02:06:27 -0500</lastBuildDate><atom:link href="https://firer1946.github.io/tags/%E6%A0%87%E7%AD%BE1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>代码段测试</title>
+      <link>https://firer1946.github.io/post/%E4%BB%A3%E7%A0%81/</link>
+      <pubDate>Thu, 16 Dec 2021 02:06:27 -0500</pubDate>
+      
+      <guid>https://firer1946.github.io/post/%E4%BB%A3%E7%A0%81/</guid>
+      <description>Hello Hugo  aaa bbb ccc  233 标题3 标题4 1 2 3 4 5 6 7 8 9 10 11 12 13 14  # 整体视频连续性检测子任务 @staticmethod def detectVideoContinuancesSub(instance_args_map,match_list,unique_head_catch_list,channel_encoding,ad_encoding,start,end,duration,ad_name): instance = DetectAds(**instance_args_map) # print(len(match_list),len(channel_encoding),len(ad_encoding)) for i in range(start,end): catch = unique_head_catch_list[i] channel_index,ad_index = catch[0],catch[1] # print(f&amp;#39;loop:{i}&amp;#39;) is_match = instance.detectVideoContinuanceUnit(channel_index,ad_index,channel_encoding,ad_encoding) # print(f&amp;#39;is_match:{is_match}&amp;#39;) if is_match: match = instance.convertMatchFormat(channel_index,duration,ad_name) match_list.append(match)   </description>
+    </item>
+    
+  </channel>
+</rss>

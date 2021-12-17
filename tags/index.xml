@@ -1,21 +1,39 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Tags on ExampleSite</title>
-    <link>t.me/tags/</link>
-    <description>Recent content in Tags on ExampleSite</description>
+    <title>Tags on Hadoken</title>
+    <link>https://firer1946.github.io/tags/</link>
+    <description>Recent content in Tags on Hadoken</description>
     <image>
-      <url>t.me/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>t.me/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://firer1946.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://firer1946.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 16 Dec 2021 02:06:27 -0500</lastBuildDate><atom:link href="t.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 16 Dec 2021 02:06:27 -0500</lastBuildDate><atom:link href="https://firer1946.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>233</title>
-      <link>t.me/tags/233/</link>
+      <link>https://firer1946.github.io/tags/233/</link>
       <pubDate>Thu, 16 Dec 2021 02:06:27 -0500</pubDate>
       
-      <guid>t.me/tags/233/</guid>
+      <guid>https://firer1946.github.io/tags/233/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>标签1</title>
+      <link>https://firer1946.github.io/tags/%E6%A0%87%E7%AD%BE1/</link>
+      <pubDate>Thu, 16 Dec 2021 02:06:27 -0500</pubDate>
+      
+      <guid>https://firer1946.github.io/tags/%E6%A0%87%E7%AD%BE1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>标签4</title>
+      <link>https://firer1946.github.io/tags/%E6%A0%87%E7%AD%BE4/</link>
+      <pubDate>Thu, 16 Dec 2021 02:06:27 -0500</pubDate>
+      
+      <guid>https://firer1946.github.io/tags/%E6%A0%87%E7%AD%BE4/</guid>
       <description></description>
     </item>
     
