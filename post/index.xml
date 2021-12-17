@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on ExampleSite</title>
+    <link>t.me/post/</link>
+    <description>Recent content in Posts on ExampleSite</description>
+    <image>
+      <url>t.me/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>t.me/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 16 Dec 2021 02:06:27 -0500</lastBuildDate><atom:link href="t.me/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>First</title>
+      <link>t.me/post/first/</link>
+      <pubDate>Thu, 16 Dec 2021 02:06:27 -0500</pubDate>
+      
+      <guid>t.me/post/first/</guid>
+      <description>Hello Hugo  aaa bbb ccc  </description>
+    </item>
+    
+  </channel>
+</rss>
