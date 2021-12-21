@@ -162,10 +162,10 @@ calibre-web的部署
 </span><span class=w>
 </span></code></pre></td></tr></table>
 </div>
-</div><p>{{calibre_web.config_dir}}修改为自己的配置文件夹，需要权限修改为777，<code>chmod -R 777 &lt;文件夹></code>，不然无法上传书籍<br>
-{{calibre_web.books_dir}} 主要是存放书籍的目录<br>
-{{calibre_web.port}} 开放端口<br>
-网络不好的话最好把AMAZON_KG_URL，CALIBRE_INSTALLER_SOURCE_CODE_URL的文件手动下载下来，使用ansible部署还是比较方便的</p>
+</div><p>{{calibre_web.config_dir}}修改为自己的配置文件夹，需要权限修改为777，<code>chmod -R 777 &lt;文件夹></code>，不然无法上传书籍</p>
+<p>{{calibre_web.books_dir}} 主要是存放书籍的目录</p>
+<p>{{calibre_web.port}} 开放端口</p>
+<p>网络不好的话最好把AMAZON_KG_URL，CALIBRE_INSTALLER_SOURCE_CODE_URL的文件手动下载下来，使用ansible部署还是比较方便的</p>
 <h1 id=中文化修改>中文化修改<a hidden class=anchor aria-hidden=true href=#中文化修改>#</a></h1>
 <p>通过technosoft2000的镜像部署下来发现<code>下载</code>和<code>推送到kindle</code>的中文书籍都是拼音，原来是存储的时候使用了拼音作为文件名，所以在下载和发邮件的部分做了一些魔改，具体修改见<a href=https://github.com/firer1946/calibre-web.git>仓库</a>,由于只是针对中文下的修改，所以就不提pr了</p>
 <p>效果如下:<br>
