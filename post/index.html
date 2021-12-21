@@ -9,7 +9,7 @@
 <meta name=author content="Me">
 <link rel=canonical href=https://firer1946.github.io/post/>
 <meta name=google-site-verification content="G-N747Q6G6NL">
-<link crossorigin=anonymous href=/assets/css/stylesheet.min.f90587b1899ca5515690622f318310295ba811ba6bb300ba99456c42c7118b1f.css integrity="sha256-+QWHsYmcpVFWkGIvMYMQKVuoEbprswC6mUVsQscRix8=" rel="preload stylesheet" as=style>
+<link crossorigin=anonymous href=/assets/css/stylesheet.min.995bfb4653fe6756098f7f80d30fd27c6b5499852bb528c39631a88fa40624a2.css integrity="sha256-mVv7RlP+Z1YJj3+A0w/SfGtUmYUrtSjDljGoj6QGJKI=" rel="preload stylesheet" as=style>
 <link rel=preload href=/images/logo/logo.png as=image>
 <link rel=icon href=https://firer1946.github.io/images/logo/logo.png>
 <link rel=icon type=image/png sizes=16x16 href=https://firer1946.github.io/images/logo/logo.png>
@@ -80,36 +80,18 @@
 </header>
 <article class=post-entry>
 <header class=entry-header>
-<h2>测试
+<h2>Hugo使用
 </h2>
 </header>
 <section class=entry-content>
-<p>测试页面</p>
+<p>之前使用grdiea,确实很好,但是灵活性相对差一些,主要比较少的主题可选 因此现在切换到了hugo,整体的构建速度很快,毫秒级的速度,整体设计比较优雅, 对比了一下其他的框架,使用go也不需要那么多的依赖,安装环境方便
+自动化部署 加上一些自动化部署,就只需要一些把markdown内容到私有git,程序就自动构建并推送GitHub pages仓库,整体很方便,同时搭建一个预览服务使用systemd托管, 就所见即可得了
+脚本
+1 2 3 4 5 6 7 8 echo "=====" date git pull /root/go/bin/hugo --theme=PaperMod --baseUrl='https://firer1946.github.io' cd public git add -A git commit -m 'update' git push origin master 主题选择 经过一轮对比,选择了PaperMod,外观简洁,且功能也比较齐全,很满意
+安装 1 2 3 git clone https://github.com/gohugoio/hugo.git cd hugo go install 常用命令 1 2 3 4 5 6 7 8 # 创建站点 hugo new site /path/to/site -f yaml # serve hugo server --theme=PaperMod --buildDrafts --bind="0....</p>
 </section>
-<footer class=entry-footer><span title="2021-12-21 10:29:00 +0800 CST">December 21, 2021</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to 测试" href=https://firer1946.github.io/post/2021/%E6%B5%8B%E8%AF%95/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>测试2
-</h2>
-</header>
-<section class=entry-content>
-<p>测试页面2</p>
-</section>
-<footer class=entry-footer><span title="2021-12-21 10:29:00 +0800 CST">December 21, 2021</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to 测试2" href=https://firer1946.github.io/post/2021/%E6%B5%8B%E8%AF%952/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>测试3
-</h2>
-</header>
-<section class=entry-content>
-<p>测试页面3 附加</p>
-</section>
-<footer class=entry-footer><span title="2021-12-21 10:29:00 +0800 CST">December 21, 2021</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to 测试3" href=https://firer1946.github.io/post/2021/%E6%B5%8B%E8%AF%953/></a>
+<footer class=entry-footer><span title="2021-12-21 12:38:00 +0800 CST">2021-12-21</span>&nbsp;·&nbsp;3 分钟&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to Hugo使用" href=https://firer1946.github.io/post/2021/hugo%E4%BD%BF%E7%94%A8/></a>
 </article>
 <article class=post-entry>
 <header class=entry-header>
@@ -126,7 +108,7 @@ hyper-v虚拟机 选择这个是因为性能够强，几乎能达到物理机的
 1 2 3 4 5 6 7 cd %systemroot%\system32 copy mstsc.exe mstsc2.exe cd %systemroot%\system32\en-us\ copy mstsc.exe.mui mstsc2.exe.mui # 修改注册表 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers" /t REG_SZ /v "C:\Windows\System32\mstsc2.exe" /d "~ DPIUNAWARE" /f 然后把rdp保存为配置文件运行即可
 1 mstsc2 xxx.rdp 最终效果 效果比想象地要好，几乎没有什么延迟</p>
 </section>
-<footer class=entry-footer><span title="2021-01-22 16:21:00 +0800 CST">January 22, 2021</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;Me</footer>
+<footer class=entry-footer><span title="2021-01-22 16:21:00 +0800 CST">2021-01-22</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to junk软件隔离计划" href=https://firer1946.github.io/post/2021/junk%E8%BD%AF%E4%BB%B6%E9%9A%94%E7%A6%BB%E8%AE%A1%E5%88%92/></a>
 </article>
 <article class=post-entry>
@@ -141,8 +123,34 @@ pyqt5 高分屏支持 1 os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1" Qprocess
 1 2 3 4 5 6 7 8 9 10 # process 部分 self.process.readyRead.connect(self.dataReady) # 输出槽函数 def dataReady(self): cursor = self.textEdit.textCursor() cursor.movePosition(cursor.End) text = self.process.readAll() cursor.insertText(str(text)) self.textEdit.ensureCursorVisible() print(text) 打包 使用了好几个打包成exe的工具，发现基本都没办法很好的支持unbuffered，不关闭缓存就无法正常地实时获取运行的日志，pyinstaller, cxfreeze 直接打包还可以，但是不支持，还是py2exe好用
 pyinstaller 1 2 # 其他程序没有二进制依赖可以不加--paths pyinstaller --paths C:\Users\firer\....</p>
 </section>
-<footer class=entry-footer><span title="2021-01-12 16:21:00 +0800 CST">January 12, 2021</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;Me</footer>
+<footer class=entry-footer><span title="2021-01-12 16:21:00 +0800 CST">2021-01-12</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to pyqt5 && python打包" href=https://firer1946.github.io/post/2021/pyqt5-python%E6%89%93%E5%8C%85/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>ventoy iso启动
+</h2>
+</header>
+<section class=entry-content>
+<p>这个工具写入u盘后可以直接启动iso镜像，以后就不用反复地格盘了，平时也可以正常当u盘使用，配合wepe工具箱应该很不错
+类似功能的听说还有yumi</p>
+</section>
+<footer class=entry-footer><span title="2021-01-06 16:21:00 +0800 CST">2021-01-06</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to ventoy iso启动" href=https://firer1946.github.io/post/2021/ventoy-iso%E5%90%AF%E5%8A%A8/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>超大量用户数据去重
+</h2>
+</header>
+<section class=entry-content>
+<p>之前统计系统到需要亿级的用户设备id去重，统计新增用户，直接使用clickhouse join由于笛卡尔积的原因导致效率偏低，早有听闻hbase rowkey的效率比较高，就想到了使用它来进行去重，把需要去重的键值连起来，每条数据查重理论上复杂度为1，当成一个比较大的redis来使用。
+使用起来效果非常惊人，Result[] get(List&lt;Get> var1) 这个函数提供了大量rowkey的查询，10万条数据几乎不到1s的时间，使用java进行求差集的效率也很不错，整体每天的数据批量去重只需要几秒钟就能完成
+如果时间差距过大，采取每天轮询的方式还是很不错的，保证每个批次的数据量不会太大，降低hbase的数据吞吐压力，曾经尝试每次查询200万的数据都是没有问题，只是数据传输的时间会长一些
+当然也可以用来redis来做这个处理，但是redis可能持久化存储这么多数据是一件比较麻烦的事情，而hbase本来就有海量存储的这个属性，不得不说比hive快了好多</p>
+</section>
+<footer class=entry-footer><span title="2021-01-06 16:21:00 +0800 CST">2021-01-06</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to 超大量用户数据去重" href=https://firer1946.github.io/post/2021/%E8%B6%85%E5%A4%A7%E9%87%8F%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E5%8E%BB%E9%87%8D/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>
