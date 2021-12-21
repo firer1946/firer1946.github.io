@@ -8,6 +8,25 @@
       <url>https://firer1946.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://firer1946.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://firer1946.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 21 Dec 2021 10:29:00 +0800</lastBuildDate><atom:link href="https://firer1946.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>测试</title>
+      <link>https://firer1946.github.io/categories/%E6%B5%8B%E8%AF%95/</link>
+      <pubDate>Tue, 21 Dec 2021 10:29:00 +0800</pubDate>
+      
+      <guid>https://firer1946.github.io/categories/%E6%B5%8B%E8%AF%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>维修</title>
+      <link>https://firer1946.github.io/categories/%E7%BB%B4%E4%BF%AE/</link>
+      <pubDate>Wed, 06 Jan 2021 16:21:00 +0800</pubDate>
+      
+      <guid>https://firer1946.github.io/categories/%E7%BB%B4%E4%BF%AE/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
