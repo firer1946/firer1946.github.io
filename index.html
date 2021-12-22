@@ -80,8 +80,8 @@
 <h1>Hi there 👋</h1>
 </header>
 <section class=entry-content>
-<p>一个可运行的复杂系统，总是从一个简单系统演变而来的。<br>
-似乎可以因此推断：从头开始设计一个复杂系统，永远不会奏效，<br>
+<p>一个可运行的复杂系统，总是从一个简单系统演变而来的。
+似乎可以因此推断：从头开始设计一个复杂系统，永远不会奏效，
 必须从一个简单系统开始设计。</p>
 </section>
 <footer class=entry-footer>
@@ -115,10 +115,10 @@
 <p>之前使用grdiea,确实很好,但是灵活性相对差一些,主要比较少的主题可选 因此现在切换到了hugo,整体的构建速度很快,毫秒级的速度,整体设计比较优雅, 对比了一下其他的框架,使用go也不需要那么多的依赖,安装环境方便
 自动化部署 加上一些自动化部署,就只需要一些把markdown内容到私有git,程序就自动构建并推送GitHub pages仓库,整体很方便,同时搭建一个预览服务使用systemd托管, 就所见即可得了
 脚本
-1 2 3 4 5 6 7 8 echo "=====" date git pull /root/go/bin/hugo --theme=PaperMod --baseUrl='https://firer1946.github.io' cd public git add -A git commit -m 'update' git push origin master 主题选择 经过一轮对比,选择了PaperMod,外观简洁,且功能也比较齐全,很满意
-安装 1 2 3 git clone https://github.com/gohugoio/hugo.git cd hugo go install 常用命令 1 2 3 4 5 6 7 8 # 创建站点 hugo new site /path/to/site -f yaml # serve hugo server --theme=PaperMod --buildDrafts --bind="0....</p>
+echo "=====" date git pull /root/go/bin/hugo --theme=PaperMod --baseUrl='https://firer1946.github.io' cd public git add -A git commit -m 'update' git push origin master 主题选择 经过一轮对比,选择了PaperMod,外观简洁,且功能也比较齐全,很满意
+安装 git clone https://github.com/gohugoio/hugo.git cd hugo go install 常用命令 # 创建站点 hugo new site /path/to/site -f yaml # serve hugo server --theme=PaperMod --buildDrafts --bind="0.0.0.0" --baseUrl=t.me -p 23333 # 构建 hugo --theme=PaperMod --baseUrl='https://firer1946.' # 新建文件 hugo new about.md 多语言支持 该主题多语言支持也不错,目前只需要中文和英文就可以了...</p>
 </section>
-<footer class=entry-footer><span title="2021-12-21 12:38:00 +0800 CST">2021-12-21</span>&nbsp;·&nbsp;3 分钟&nbsp;·&nbsp;Me</footer>
+<footer class=entry-footer><span title="2021-12-21 12:38:00 +0800 CST">2021-12-21</span>&nbsp;·&nbsp;2 分钟&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to Hugo使用" href=https://firer1946.github.io/post/2021/hugo%E4%BD%BF%E7%94%A8/></a>
 </article>
 <article class=post-entry>
@@ -128,13 +128,10 @@
 </header>
 <section class=entry-content>
 <p>由于最近qq扫描浏览器文件的问题，只能把这些不规矩的软件都请到虚拟机里边去了，包括深信服，深信服装个windows版的v2ray服务端映射出来即可
-hyper-v虚拟机 选择这个是因为性能够强，几乎能达到物理机的水平，内存分配1.5g，cpu 2核
-把qq和微信直接扔进去耍就可以了,好处就是几乎不会关机,物理机关机只会挂起相当于睡眠
-微信不用每次都重新登录
-远程分辨率的问题 由于使用4k屏发现远程桌面不全屏缩放比例就不对了，找了半天终于找到了解决方案，虽然不知道具体原理，但是基本解决了问题，保持原始分辨率，虽然糊了点
-解决方案
-1 2 3 4 5 6 7 cd %systemroot%\system32 copy mstsc.exe mstsc2.exe cd %systemroot%\system32\en-us\ copy mstsc.exe.mui mstsc2.exe.mui # 修改注册表 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers" /t REG_SZ /v "C:\Windows\System32\mstsc2.exe" /d "~ DPIUNAWARE" /f 然后把rdp保存为配置文件运行即可
-1 mstsc2 xxx.rdp 最终效果 效果比想象地要好，几乎没有什么延迟</p>
+hyper-v虚拟机 选择这个是因为性能够强，几乎能达到物理机的水平，内存分配1.5g，cpu 2核 把qq和微信直接扔进去耍就可以了,好处就是几乎不会关机,物理机关机只会挂起相当于睡眠 微信不用每次都重新登录
+远程分辨率的问题 由于使用4k屏发现远程桌面不全屏缩放比例就不对了，找了半天终于找到了解决方案，虽然不知道具体原理，但是基本解决了问题，保持原始分辨率，虽然糊了点 解决方案
+cd %systemroot%\system32 copy mstsc.exe mstsc2.exe cd %systemroot%\system32\en-us\ copy mstsc.exe.mui mstsc2.exe.mui # 修改注册表 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers" /t REG_SZ /v "C:\Windows\System32\mstsc2.exe" /d "~ DPIUNAWARE" /f 然后把rdp保存为配置文件运行即可
+mstsc2 xxx.rdp 最终效果 效果比想象地要好，几乎没有什么延迟</p>
 </section>
 <footer class=entry-footer><span title="2021-01-22 16:21:00 +0800 CST">2021-01-22</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to junk软件隔离计划" href=https://firer1946.github.io/post/2021/junk%E8%BD%AF%E4%BB%B6%E9%9A%94%E7%A6%BB%E8%AE%A1%E5%88%92/></a>
@@ -146,10 +143,11 @@ hyper-v虚拟机 选择这个是因为性能够强，几乎能达到物理机的
 </header>
 <section class=entry-content>
 <p>最近需要给之前的命令行程序写一个界面，使用Qt-designer拖界面还是比较方便的，其中一个比较麻烦的问题就是实时输出日志的问题，直接使用os.popen会导致窗口进程直接卡死，需要使用qt提供的Qprocess来处理，然而最终还是有问题；才发现是python的缓存问题，直接运行可以使用-u解决，但是pyinstaller打包不支持unbuffered,最终使用了py2exe
-pyqt5 高分屏支持 1 os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1" Qprocess子进程 为了防止大批量的任务导致窗口进程卡死，需要使用qt实现的qprocess来调用，使用os.popen 和 subprocess都是会出问题的
-1 2 3 self.process = QtCore.QProcess() self.textEdit.clear() self.process.start(command) 系统命令实时日志获取 因为python缓冲区的问题，误以为是qt这部分的问题
-1 2 3 4 5 6 7 8 9 10 # process 部分 self.process.readyRead.connect(self.dataReady) # 输出槽函数 def dataReady(self): cursor = self.textEdit.textCursor() cursor.movePosition(cursor.End) text = self.process.readAll() cursor.insertText(str(text)) self.textEdit.ensureCursorVisible() print(text) 打包 使用了好几个打包成exe的工具，发现基本都没办法很好的支持unbuffered，不关闭缓存就无法正常地实时获取运行的日志，pyinstaller, cxfreeze 直接打包还可以，但是不支持，还是py2exe好用
-pyinstaller 1 2 # 其他程序没有二进制依赖可以不加--paths pyinstaller --paths C:\Users\firer\....</p>
+pyqt5 高分屏支持 os.environ["QT_AUTO_SCREEN_SCALE_FACTOR"] = "1" Qprocess子进程 为了防止大批量的任务导致窗口进程卡死，需要使用qt实现的qprocess来调用，使用os.popen 和 subprocess都是会出问题的
+self.process = QtCore.QProcess() self.textEdit.clear() self.process.start(command) 系统命令实时日志获取 因为python缓冲区的问题，误以为是qt这部分的问题
+# process 部分 self.process.readyRead.connect(self.dataReady) # 输出槽函数 def dataReady(self): cursor = self.textEdit.textCursor() cursor.movePosition(cursor.End) text = self.process.readAll() cursor.insertText(str(text)) self.textEdit.ensureCursorVisible() print(text) 打包 使用了好几个打包成exe的工具，发现基本都没办法很好的支持unbuffered，不关闭缓存就无法正常地实时获取运行的日志，pyinstaller, cxfreeze 直接打包还可以，但是不支持，还是py2exe好用
+pyinstaller # 其他程序没有二进制依赖可以不加--paths pyinstaller --paths C:\Users\firer\.virtualenvs\compress_images-8VD5V_Md\Lib\site-packages\PyQt5\Qt\bin -F -w .\image_compress_ui.py cxfreeze 需要打包的文件夹创建setup.py（任意名字都可以）
+import sys from cx_Freeze import setup, Executable include_files = [] build_exe_options = {'packages': ['PIL'], 'excludes': [], 'include_files':include_files } base = None if sys....</p>
 </section>
 <footer class=entry-footer><span title="2021-01-12 16:21:00 +0800 CST">2021-01-12</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to pyqt5 && python打包" href=https://firer1946.github.io/post/2021/pyqt5-python%E6%89%93%E5%8C%85/></a>

@@ -19,8 +19,8 @@
       <description>之前使用grdiea,确实很好,但是灵活性相对差一些,主要比较少的主题可选 因此现在切换到了hugo,整体的构建速度很快,毫秒级的速度,整体设计比较优雅, 对比了一下其他的框架,使用go也不需要那么多的依赖,安装环境方便
 自动化部署 加上一些自动化部署,就只需要一些把markdown内容到私有git,程序就自动构建并推送GitHub pages仓库,整体很方便,同时搭建一个预览服务使用systemd托管, 就所见即可得了
 脚本
-1 2 3 4 5 6 7 8  echo &amp;#34;=====&amp;#34; date git pull /root/go/bin/hugo --theme=PaperMod --baseUrl=&amp;#39;https://firer1946.github.io&amp;#39; cd public git add -A git commit -m &amp;#39;update&amp;#39; git push origin master   主题选择 经过一轮对比,选择了PaperMod,外观简洁,且功能也比较齐全,很满意
-安装 1 2 3  git clone https://github.com/gohugoio/hugo.git cd hugo go install   常用命令 1 2 3 4 5 6 7 8  # 创建站点 hugo new site /path/to/site -f yaml # serve hugo server --theme=PaperMod --buildDrafts --bind=&amp;#34;0.</description>
+echo &amp;#34;=====&amp;#34; date git pull /root/go/bin/hugo --theme=PaperMod --baseUrl=&amp;#39;https://firer1946.github.io&amp;#39; cd public git add -A git commit -m &amp;#39;update&amp;#39; git push origin master 主题选择 经过一轮对比,选择了PaperMod,外观简洁,且功能也比较齐全,很满意
+安装 git clone https://github.com/gohugoio/hugo.git cd hugo go install 常用命令 # 创建站点 hugo new site /path/to/site -f yaml # serve hugo server --theme=PaperMod --buildDrafts --bind=&amp;#34;0.0.0.0&amp;#34; --baseUrl=t.me -p 23333 # 构建 hugo --theme=PaperMod --baseUrl=&amp;#39;https://firer1946.&amp;#39; # 新建文件 hugo new about.md 多语言支持 该主题多语言支持也不错,目前只需要中文和英文就可以了</description>
     </item>
     
     <item>

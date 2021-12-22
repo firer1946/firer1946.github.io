@@ -6,13 +6,10 @@
 <title>junk软件隔离计划 | Hadoken</title>
 <meta name=keywords content>
 <meta name=description content="由于最近qq扫描浏览器文件的问题，只能把这些不规矩的软件都请到虚拟机里边去了，包括深信服，深信服装个windows版的v2ray服务端映射出来即可
-hyper-v虚拟机 选择这个是因为性能够强，几乎能达到物理机的水平，内存分配1.5g，cpu 2核
-把qq和微信直接扔进去耍就可以了,好处就是几乎不会关机,物理机关机只会挂起相当于睡眠
-微信不用每次都重新登录
-远程分辨率的问题 由于使用4k屏发现远程桌面不全屏缩放比例就不对了，找了半天终于找到了解决方案，虽然不知道具体原理，但是基本解决了问题，保持原始分辨率，虽然糊了点
-解决方案
-1 2 3 4 5 6 7  cd %systemroot%\system32 copy mstsc.exe mstsc2.exe cd %systemroot%\system32\en-us\ copy mstsc.exe.mui mstsc2.exe.mui # 修改注册表 reg add &#34;HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers&#34; /t REG_SZ /v &#34;C:\Windows\System32\mstsc2.exe&#34; /d &#34;~ DPIUNAWARE&#34; /f   然后把rdp保存为配置文件运行即可
-1  mstsc2 xxx.rdp   最终效果 效果比想象地要好，几乎没有什么延迟">
+hyper-v虚拟机 选择这个是因为性能够强，几乎能达到物理机的水平，内存分配1.5g，cpu 2核 把qq和微信直接扔进去耍就可以了,好处就是几乎不会关机,物理机关机只会挂起相当于睡眠 微信不用每次都重新登录
+远程分辨率的问题 由于使用4k屏发现远程桌面不全屏缩放比例就不对了，找了半天终于找到了解决方案，虽然不知道具体原理，但是基本解决了问题，保持原始分辨率，虽然糊了点 解决方案
+cd %systemroot%\system32 copy mstsc.exe mstsc2.exe cd %systemroot%\system32\en-us\ copy mstsc.exe.mui mstsc2.exe.mui # 修改注册表 reg add &#34;HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers&#34; /t REG_SZ /v &#34;C:\Windows\System32\mstsc2.exe&#34; /d &#34;~ DPIUNAWARE&#34; /f 然后把rdp保存为配置文件运行即可
+mstsc2 xxx.rdp 最终效果 效果比想象地要好，几乎没有什么延迟">
 <meta name=author content="Me">
 <link rel=canonical href=https://firer1946.github.io/post/2021/junk%E8%BD%AF%E4%BB%B6%E9%9A%94%E7%A6%BB%E8%AE%A1%E5%88%92/>
 <meta name=google-site-verification content="G-N747Q6G6NL">
@@ -36,13 +33,10 @@ hyper-v虚拟机 选择这个是因为性能够强，几乎能达到物理机的
 <script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-N747Q6G6NL',{anonymize_ip:!1})}</script>
 <meta property="og:title" content="junk软件隔离计划">
 <meta property="og:description" content="由于最近qq扫描浏览器文件的问题，只能把这些不规矩的软件都请到虚拟机里边去了，包括深信服，深信服装个windows版的v2ray服务端映射出来即可
-hyper-v虚拟机 选择这个是因为性能够强，几乎能达到物理机的水平，内存分配1.5g，cpu 2核
-把qq和微信直接扔进去耍就可以了,好处就是几乎不会关机,物理机关机只会挂起相当于睡眠
-微信不用每次都重新登录
-远程分辨率的问题 由于使用4k屏发现远程桌面不全屏缩放比例就不对了，找了半天终于找到了解决方案，虽然不知道具体原理，但是基本解决了问题，保持原始分辨率，虽然糊了点
-解决方案
-1 2 3 4 5 6 7  cd %systemroot%\system32 copy mstsc.exe mstsc2.exe cd %systemroot%\system32\en-us\ copy mstsc.exe.mui mstsc2.exe.mui # 修改注册表 reg add &#34;HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers&#34; /t REG_SZ /v &#34;C:\Windows\System32\mstsc2.exe&#34; /d &#34;~ DPIUNAWARE&#34; /f   然后把rdp保存为配置文件运行即可
-1  mstsc2 xxx.rdp   最终效果 效果比想象地要好，几乎没有什么延迟">
+hyper-v虚拟机 选择这个是因为性能够强，几乎能达到物理机的水平，内存分配1.5g，cpu 2核 把qq和微信直接扔进去耍就可以了,好处就是几乎不会关机,物理机关机只会挂起相当于睡眠 微信不用每次都重新登录
+远程分辨率的问题 由于使用4k屏发现远程桌面不全屏缩放比例就不对了，找了半天终于找到了解决方案，虽然不知道具体原理，但是基本解决了问题，保持原始分辨率，虽然糊了点 解决方案
+cd %systemroot%\system32 copy mstsc.exe mstsc2.exe cd %systemroot%\system32\en-us\ copy mstsc.exe.mui mstsc2.exe.mui # 修改注册表 reg add &#34;HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers&#34; /t REG_SZ /v &#34;C:\Windows\System32\mstsc2.exe&#34; /d &#34;~ DPIUNAWARE&#34; /f 然后把rdp保存为配置文件运行即可
+mstsc2 xxx.rdp 最终效果 效果比想象地要好，几乎没有什么延迟">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://firer1946.github.io/post/2021/junk%E8%BD%AF%E4%BB%B6%E9%9A%94%E7%A6%BB%E8%AE%A1%E5%88%92/"><meta property="og:image" content="https://firer1946.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta property="article:section" content="post">
 <meta property="article:published_time" content="2021-01-22T16:21:00+08:00">
@@ -51,15 +45,12 @@ hyper-v虚拟机 选择这个是因为性能够强，几乎能达到物理机的
 <meta name=twitter:image content="https://firer1946.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E">
 <meta name=twitter:title content="junk软件隔离计划">
 <meta name=twitter:description content="由于最近qq扫描浏览器文件的问题，只能把这些不规矩的软件都请到虚拟机里边去了，包括深信服，深信服装个windows版的v2ray服务端映射出来即可
-hyper-v虚拟机 选择这个是因为性能够强，几乎能达到物理机的水平，内存分配1.5g，cpu 2核
-把qq和微信直接扔进去耍就可以了,好处就是几乎不会关机,物理机关机只会挂起相当于睡眠
-微信不用每次都重新登录
-远程分辨率的问题 由于使用4k屏发现远程桌面不全屏缩放比例就不对了，找了半天终于找到了解决方案，虽然不知道具体原理，但是基本解决了问题，保持原始分辨率，虽然糊了点
-解决方案
-1 2 3 4 5 6 7  cd %systemroot%\system32 copy mstsc.exe mstsc2.exe cd %systemroot%\system32\en-us\ copy mstsc.exe.mui mstsc2.exe.mui # 修改注册表 reg add &#34;HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers&#34; /t REG_SZ /v &#34;C:\Windows\System32\mstsc2.exe&#34; /d &#34;~ DPIUNAWARE&#34; /f   然后把rdp保存为配置文件运行即可
-1  mstsc2 xxx.rdp   最终效果 效果比想象地要好，几乎没有什么延迟">
+hyper-v虚拟机 选择这个是因为性能够强，几乎能达到物理机的水平，内存分配1.5g，cpu 2核 把qq和微信直接扔进去耍就可以了,好处就是几乎不会关机,物理机关机只会挂起相当于睡眠 微信不用每次都重新登录
+远程分辨率的问题 由于使用4k屏发现远程桌面不全屏缩放比例就不对了，找了半天终于找到了解决方案，虽然不知道具体原理，但是基本解决了问题，保持原始分辨率，虽然糊了点 解决方案
+cd %systemroot%\system32 copy mstsc.exe mstsc2.exe cd %systemroot%\system32\en-us\ copy mstsc.exe.mui mstsc2.exe.mui # 修改注册表 reg add &#34;HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers&#34; /t REG_SZ /v &#34;C:\Windows\System32\mstsc2.exe&#34; /d &#34;~ DPIUNAWARE&#34; /f 然后把rdp保存为配置文件运行即可
+mstsc2 xxx.rdp 最终效果 效果比想象地要好，几乎没有什么延迟">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":2,"name":"Posts","item":"https://firer1946.github.io/post/"},{"@type":"ListItem","position":3,"name":"junk软件隔离计划","item":"https://firer1946.github.io/post/2021/junk%E8%BD%AF%E4%BB%B6%E9%9A%94%E7%A6%BB%E8%AE%A1%E5%88%92/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"junk软件隔离计划","name":"junk软件隔离计划","description":"由于最近qq扫描浏览器文件的问题，只能把这些不规矩的软件都请到虚拟机里边去了，包括深信服，深信服装个windows版的v2ray服务端映射出来即可\nhyper-v虚拟机 选择这个是因为性能够强，几乎能达到物理机的水平，内存分配1.5g，cpu 2核\n把qq和微信直接扔进去耍就可以了,好处就是几乎不会关机,物理机关机只会挂起相当于睡眠\n微信不用每次都重新登录\n远程分辨率的问题 由于使用4k屏发现远程桌面不全屏缩放比例就不对了，找了半天终于找到了解决方案，虽然不知道具体原理，但是基本解决了问题，保持原始分辨率，虽然糊了点\n解决方案\n1 2 3 4 5 6 7  cd %systemroot%\\system32 copy mstsc.exe mstsc2.exe cd %systemroot%\\system32\\en-us\\ copy mstsc.exe.mui mstsc2.exe.mui # 修改注册表 reg add \u0026#34;HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\Layers\u0026#34; /t REG_SZ /v \u0026#34;C:\\Windows\\System32\\mstsc2.exe\u0026#34; /d \u0026#34;~ DPIUNAWARE\u0026#34; /f   然后把rdp保存为配置文件运行即可\n1  mstsc2 xxx.rdp   最终效果 效果比想象地要好，几乎没有什么延迟","keywords":[],"articleBody":"由于最近qq扫描浏览器文件的问题，只能把这些不规矩的软件都请到虚拟机里边去了，包括深信服，深信服装个windows版的v2ray服务端映射出来即可\nhyper-v虚拟机 选择这个是因为性能够强，几乎能达到物理机的水平，内存分配1.5g，cpu 2核\n把qq和微信直接扔进去耍就可以了,好处就是几乎不会关机,物理机关机只会挂起相当于睡眠\n微信不用每次都重新登录\n远程分辨率的问题 由于使用4k屏发现远程桌面不全屏缩放比例就不对了，找了半天终于找到了解决方案，虽然不知道具体原理，但是基本解决了问题，保持原始分辨率，虽然糊了点\n解决方案\n1 2 3 4 5 6 7  cd %systemroot%\\system32 copy mstsc.exe mstsc2.exe cd %systemroot%\\system32\\en-us\\ copy mstsc.exe.mui mstsc2.exe.mui # 修改注册表 reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\Layers\" /t REG_SZ /v \"C:\\Windows\\System32\\mstsc2.exe\" /d \"~ DPIUNAWARE\" /f   然后把rdp保存为配置文件运行即可\n1  mstsc2 xxx.rdp   最终效果 效果比想象地要好，几乎没有什么延迟\n","wordCount":"46","inLanguage":"zh","datePublished":"2021-01-22T16:21:00+08:00","dateModified":"2021-01-22T16:21:00+08:00","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://firer1946.github.io/post/2021/junk%E8%BD%AF%E4%BB%B6%E9%9A%94%E7%A6%BB%E8%AE%A1%E5%88%92/"},"publisher":{"@type":"Organization","name":"Hadoken","logo":{"@type":"ImageObject","url":"https://firer1946.github.io/images/logo/logo.png"}}}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"junk软件隔离计划","name":"junk软件隔离计划","description":"由于最近qq扫描浏览器文件的问题，只能把这些不规矩的软件都请到虚拟机里边去了，包括深信服，深信服装个windows版的v2ray服务端映射出来即可\nhyper-v虚拟机 选择这个是因为性能够强，几乎能达到物理机的水平，内存分配1.5g，cpu 2核 把qq和微信直接扔进去耍就可以了,好处就是几乎不会关机,物理机关机只会挂起相当于睡眠 微信不用每次都重新登录\n远程分辨率的问题 由于使用4k屏发现远程桌面不全屏缩放比例就不对了，找了半天终于找到了解决方案，虽然不知道具体原理，但是基本解决了问题，保持原始分辨率，虽然糊了点 解决方案\ncd %systemroot%\\system32 copy mstsc.exe mstsc2.exe cd %systemroot%\\system32\\en-us\\ copy mstsc.exe.mui mstsc2.exe.mui # 修改注册表 reg add \u0026#34;HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\Layers\u0026#34; /t REG_SZ /v \u0026#34;C:\\Windows\\System32\\mstsc2.exe\u0026#34; /d \u0026#34;~ DPIUNAWARE\u0026#34; /f 然后把rdp保存为配置文件运行即可\nmstsc2 xxx.rdp 最终效果 效果比想象地要好，几乎没有什么延迟","keywords":[],"articleBody":"由于最近qq扫描浏览器文件的问题，只能把这些不规矩的软件都请到虚拟机里边去了，包括深信服，深信服装个windows版的v2ray服务端映射出来即可\nhyper-v虚拟机 选择这个是因为性能够强，几乎能达到物理机的水平，内存分配1.5g，cpu 2核 把qq和微信直接扔进去耍就可以了,好处就是几乎不会关机,物理机关机只会挂起相当于睡眠 微信不用每次都重新登录\n远程分辨率的问题 由于使用4k屏发现远程桌面不全屏缩放比例就不对了，找了半天终于找到了解决方案，虽然不知道具体原理，但是基本解决了问题，保持原始分辨率，虽然糊了点 解决方案\ncd %systemroot%\\system32 copy mstsc.exe mstsc2.exe cd %systemroot%\\system32\\en-us\\ copy mstsc.exe.mui mstsc2.exe.mui # 修改注册表 reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\Layers\" /t REG_SZ /v \"C:\\Windows\\System32\\mstsc2.exe\" /d \"~ DPIUNAWARE\" /f 然后把rdp保存为配置文件运行即可\nmstsc2 xxx.rdp 最终效果 效果比想象地要好，几乎没有什么延迟\n","wordCount":"38","inLanguage":"zh","datePublished":"2021-01-22T16:21:00+08:00","dateModified":"2021-01-22T16:21:00+08:00","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://firer1946.github.io/post/2021/junk%E8%BD%AF%E4%BB%B6%E9%9A%94%E7%A6%BB%E8%AE%A1%E5%88%92/"},"publisher":{"@type":"Organization","name":"Hadoken","logo":{"@type":"ImageObject","url":"https://firer1946.github.io/images/logo/logo.png"}}}</script>
 </head>
 <body id=top>
 <script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
@@ -125,44 +116,24 @@ junk软件隔离计划
 </div>
 <div class=post-content><p>由于最近qq扫描浏览器文件的问题，只能把这些不规矩的软件都请到虚拟机里边去了，包括深信服，深信服装个windows版的v2ray服务端映射出来即可</p>
 <h1 id=hyper-v虚拟机>hyper-v虚拟机<a hidden class=anchor aria-hidden=true href=#hyper-v虚拟机>#</a></h1>
-<p>选择这个是因为性能够强，几乎能达到物理机的水平，内存分配1.5g，cpu 2核<br>
-把qq和微信直接扔进去耍就可以了,<strong>好处就是几乎不会关机</strong>,物理机关机只会挂起相当于睡眠<br>
+<p>选择这个是因为性能够强，几乎能达到物理机的水平，内存分配1.5g，cpu 2核
+把qq和微信直接扔进去耍就可以了,<strong>好处就是几乎不会关机</strong>,物理机关机只会挂起相当于睡眠
 微信不用每次都重新登录</p>
 <h1 id=远程分辨率的问题>远程分辨率的问题<a hidden class=anchor aria-hidden=true href=#远程分辨率的问题>#</a></h1>
-<p>由于使用4k屏发现远程桌面不全屏缩放比例就不对了，找了半天终于找到了解决方案，虽然不知道具体原理，但是基本解决了问题，保持原始分辨率，虽然糊了点<br>
+<p>由于使用4k屏发现远程桌面不全屏缩放比例就不对了，找了半天终于找到了解决方案，虽然不知道具体原理，但是基本解决了问题，保持原始分辨率，虽然糊了点
 <a href=https://superuser.com/questions/1457955/remoteapp-doesnt-apply-correct-scaling-initially>解决方案</a></p>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt>1
-</span><span class=lnt>2
-</span><span class=lnt>3
-</span><span class=lnt>4
-</span><span class=lnt>5
-</span><span class=lnt>6
-</span><span class=lnt>7
-</span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=nb>cd</span> %systemroot%<span class=se>\s</span>ystem32
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=nb>cd</span> %systemroot%<span class=se>\s</span>ystem32
 copy mstsc.exe mstsc2.exe
 <span class=nb>cd</span> %systemroot%<span class=se>\s</span>ystem32<span class=se>\e</span>n-us<span class=se>\
 </span><span class=se></span>copy mstsc.exe.mui mstsc2.exe.mui
 
 <span class=c1># 修改注册表</span>
 reg add <span class=s2>&#34;HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers&#34;</span> /t REG_SZ /v <span class=s2>&#34;C:\Windows\System32\mstsc2.exe&#34;</span> /d <span class=s2>&#34;~ DPIUNAWARE&#34;</span> /f
-</code></pre></td></tr></table>
-</div>
-</div><p>然后把rdp保存为配置文件运行即可</p>
+</code></pre></div><p>然后把rdp保存为配置文件运行即可</p>
 <p><img loading=lazy src=1611282825649.png alt>
 </p>
-<div class=highlight><div class=chroma>
-<table class=lntable><tr><td class=lntd>
-<pre tabindex=0 class=chroma><code><span class=lnt>1
-</span></code></pre></td>
-<td class=lntd>
-<pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>mstsc2 xxx.rdp
-</code></pre></td></tr></table>
-</div>
-</div><h1 id=最终效果>最终效果<a hidden class=anchor aria-hidden=true href=#最终效果>#</a></h1>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>mstsc2 xxx.rdp
+</code></pre></div><h1 id=最终效果>最终效果<a hidden class=anchor aria-hidden=true href=#最终效果>#</a></h1>
 <p>效果比想象地要好，几乎没有什么延迟</p>
 </div>
 <footer class=post-footer>
