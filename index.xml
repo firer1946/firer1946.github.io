@@ -16,7 +16,8 @@
       <pubDate>Tue, 21 Dec 2021 17:32:00 +0800</pubDate>
       
       <guid>https://firer1946.github.io/post/2021/test/</guid>
-      <description>obsidian测试</description>
+      <description>obsidian测试
+   书籍 描述     百年孤独 (豆瓣) 小说   柏拉图对话录 短评 哲学   明朝那些事儿（1-9） (豆瓣) 历史   经济学原理 短评 经济   乌托邦 短评 哲学   克苏鲁神话 (豆瓣) 克苏鲁    </description>
     </item>
     
     <item>
@@ -104,7 +105,7 @@ version:&amp;#34;3&amp;#34;services:calibre-web:image:technosoft2000/calibre-web
 {{calibre_web.port}} 开放端口
 网络不好的话最好把AMAZON_KG_URL，CALIBRE_INSTALLER_SOURCE_CODE_URL的文件手动下载下来，使用ansible部署还是比较方便的
 中文化修改 通过technosoft2000的镜像部署下来发现下载和推送到kindle的中文书籍都是拼音，原来是存储的时候使用了拼音作为文件名，所以在下载和发邮件的部分做了一些魔改，具体修改见仓库,由于只是针对中文下的修改，所以就不提pr了
-效果如下: </description>
+效果如下:</description>
     </item>
     
     <item>
