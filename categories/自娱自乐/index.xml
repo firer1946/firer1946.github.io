@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>自娱自乐 on Hadoken</title>
+    <link>https://firer1946.github.io/categories/%E8%87%AA%E5%A8%B1%E8%87%AA%E4%B9%90/</link>
+    <description>Recent content in 自娱自乐 on Hadoken</description>
+    <image>
+      <url>https://firer1946.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://firer1946.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 04 Jan 2021 16:21:00 +0800</lastBuildDate><atom:link href="https://firer1946.github.io/categories/%E8%87%AA%E5%A8%B1%E8%87%AA%E4%B9%90/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>start</title>
+      <link>https://firer1946.github.io/post/2021/start/</link>
+      <pubDate>Mon, 04 Jan 2021 16:21:00 +0800</pubDate>
+      
+      <guid>https://firer1946.github.io/post/2021/start/</guid>
+      <description>2021，开始重新写blogs，简单记录一下，使用什么工具不重要，只要是快速开始写起来就很好，gridea还是比较方便的，相当于本地的静态站点生成器，同步到github pages 对应的仓库即可</description>
+    </item>
+    
+  </channel>
+</rss>

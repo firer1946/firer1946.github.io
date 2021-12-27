@@ -24,6 +24,33 @@ echo &amp;#34;=====&amp;#34; date git pull /root/go/bin/hugo --theme=PaperMod --
     </item>
     
     <item>
+      <title>junk软件隔离计划</title>
+      <link>https://firer1946.github.io/post/2021/junk%E8%BD%AF%E4%BB%B6%E9%9A%94%E7%A6%BB%E8%AE%A1%E5%88%92/</link>
+      <pubDate>Fri, 22 Jan 2021 16:21:00 +0800</pubDate>
+      
+      <guid>https://firer1946.github.io/post/2021/junk%E8%BD%AF%E4%BB%B6%E9%9A%94%E7%A6%BB%E8%AE%A1%E5%88%92/</guid>
+      <description>由于最近qq扫描浏览器文件的问题，只能把这些不规矩的软件都请到虚拟机里边去了，包括深信服，深信服装个windows版的v2ray服务端映射出来即可
+hyper-v虚拟机 选择这个是因为性能够强，几乎能达到物理机的水平，内存分配1.5g，cpu 2核 把qq和微信直接扔进去耍就可以了,好处就是几乎不会关机,物理机关机只会挂起相当于睡眠 微信不用每次都重新登录
+远程分辨率的问题 由于使用4k屏发现远程桌面不全屏缩放比例就不对了，找了半天终于找到了解决方案，虽然不知道具体原理，但是基本解决了问题，保持原始分辨率，虽然糊了点 解决方案
+cd %systemroot%\system32 copy mstsc.exe mstsc2.exe cd %systemroot%\system32\en-us\ copy mstsc.exe.mui mstsc2.exe.mui # 修改注册表 reg add &amp;#34;HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers&amp;#34; /t REG_SZ /v &amp;#34;C:\Windows\System32\mstsc2.exe&amp;#34; /d &amp;#34;~ DPIUNAWARE&amp;#34; /f 然后把rdp保存为配置文件运行即可
+mstsc2 xxx.rdp 最终效果 效果比想象地要好，几乎没有什么延迟</description>
+    </item>
+    
+    <item>
+      <title>pyqt5 &amp;&amp; python打包</title>
+      <link>https://firer1946.github.io/post/2021/pyqt5-python%E6%89%93%E5%8C%85/</link>
+      <pubDate>Tue, 12 Jan 2021 16:21:00 +0800</pubDate>
+      
+      <guid>https://firer1946.github.io/post/2021/pyqt5-python%E6%89%93%E5%8C%85/</guid>
+      <description>最近需要给之前的命令行程序写一个界面，使用Qt-designer拖界面还是比较方便的，其中一个比较麻烦的问题就是实时输出日志的问题，直接使用os.popen会导致窗口进程直接卡死，需要使用qt提供的Qprocess来处理，然而最终还是有问题；才发现是python的缓存问题，直接运行可以使用-u解决，但是pyinstaller打包不支持unbuffered,最终使用了py2exe
+pyqt5 高分屏支持 os.environ[&amp;#34;QT_AUTO_SCREEN_SCALE_FACTOR&amp;#34;] = &amp;#34;1&amp;#34; Qprocess子进程 为了防止大批量的任务导致窗口进程卡死，需要使用qt实现的qprocess来调用，使用os.popen 和 subprocess都是会出问题的
+self.process = QtCore.QProcess() self.textEdit.clear() self.process.start(command) 系统命令实时日志获取 因为python缓冲区的问题，误以为是qt这部分的问题
+# process 部分 self.process.readyRead.connect(self.dataReady) # 输出槽函数 def dataReady(self): cursor = self.textEdit.textCursor() cursor.movePosition(cursor.End) text = self.process.readAll() cursor.insertText(str(text)) self.textEdit.ensureCursorVisible() print(text) 打包 使用了好几个打包成exe的工具，发现基本都没办法很好的支持unbuffered，不关闭缓存就无法正常地实时获取运行的日志，pyinstaller, cxfreeze 直接打包还可以，但是不支持，还是py2exe好用
+pyinstaller # 其他程序没有二进制依赖可以不加--paths pyinstaller --paths C:\Users\firer\.virtualenvs\compress_images-8VD5V_Md\Lib\site-packages\PyQt5\Qt\bin -F -w .\image_compress_ui.py cxfreeze 需要打包的文件夹创建setup.py（任意名字都可以）
+import sys from cx_Freeze import setup, Executable include_files = [] build_exe_options = {&amp;#39;packages&amp;#39;: [&amp;#39;PIL&amp;#39;], &amp;#39;excludes&amp;#39;: [], &amp;#39;include_files&amp;#39;:include_files } base = None if sys.</description>
+    </item>
+    
+    <item>
       <title>ventoy iso启动</title>
       <link>https://firer1946.github.io/post/2021/ventoy-iso%E5%90%AF%E5%8A%A8/</link>
       <pubDate>Wed, 06 Jan 2021 16:21:00 +0800</pubDate>
@@ -31,6 +58,22 @@ echo &amp;#34;=====&amp;#34; date git pull /root/go/bin/hugo --theme=PaperMod --
       <guid>https://firer1946.github.io/post/2021/ventoy-iso%E5%90%AF%E5%8A%A8/</guid>
       <description>这个工具写入u盘后可以直接启动iso镜像，以后就不用反复地格盘了，平时也可以正常当u盘使用，配合wepe工具箱应该很不错
 类似功能的听说还有yumi</description>
+    </item>
+    
+    <item>
+      <title>calibre-web的部署</title>
+      <link>https://firer1946.github.io/post/2021/calibre-web%E7%9A%84%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Mon, 04 Jan 2021 16:21:00 +0800</pubDate>
+      
+      <guid>https://firer1946.github.io/post/2021/calibre-web%E7%9A%84%E9%83%A8%E7%BD%B2/</guid>
+      <description>最近开始准备书单开始读书，需要一个管理系统来管理书籍，看到这个效果还不错，也支持在线阅读和格式转换，可以说是相当完善了，发送到kindle的功能比较实用
+docker-compose 找到technosoft2000/calibre-web的镜像并使用docker-compose进行部署
+version:&amp;#34;3&amp;#34;services:calibre-web:image:technosoft2000/calibre-web:latestcontainer_name:calibre_webenvironment:- APP_REPO=&amp;#34;https://github.com/firer1946/calibre-web.git&amp;#34;- AMAZON_KG_URL=&amp;#34;https://github.com/Technosoft2000/docker-calibre-web/releases/download/kindlegen/kindlegen_linux_2.6_i386_v2_9.tar.gz&amp;#34;- CALIBRE_INSTALLER_SOURCE_CODE_URL=&amp;#34;https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py&amp;#34;volumes:- {{calibre_web.config_dir}}:/config- {{calibre_web.books_dir}}:/booksports:- {{calibre_web.port}}:8083restart:unless-stopped{{calibre_web.config_dir}}修改为自己的配置文件夹，需要权限修改为777，chmod -R 777 &amp;lt;文件夹&amp;gt;，不然无法上传书籍
+{{calibre_web.books_dir}} 主要是存放书籍的目录
+{{calibre_web.port}} 开放端口
+网络不好的话最好把AMAZON_KG_URL，CALIBRE_INSTALLER_SOURCE_CODE_URL的文件手动下载下来，使用ansible部署还是比较方便的
+中文化修改 通过technosoft2000的镜像部署下来发现下载和推送到kindle的中文书籍都是拼音，原来是存储的时候使用了拼音作为文件名，所以在下载和发邮件的部分做了一些魔改，具体修改见仓库,由于只是针对中文下的修改，所以就不提pr了
+效果如下:</description>
     </item>
     
   </channel>

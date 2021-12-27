@@ -2,34 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://firer1946.github.io/</loc>
-    <lastmod>2021-12-21T17:32:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://firer1946.github.io/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://firer1946.github.io/"
-                />
-  </url><url>
-    <loc>https://firer1946.github.io/post/</loc>
-    <lastmod>2021-12-21T17:32:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://firer1946.github.io/en/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://firer1946.github.io/post/"
-                />
-  </url><url>
-    <loc>https://firer1946.github.io/post/2021/test/</loc>
-    <lastmod>2021-12-21T17:32:00+08:00</lastmod>
+    <loc>https://firer1946.github.io/tags/blog/</loc>
+    <lastmod>2021-12-21T12:38:00+08:00</lastmod>
   </url><url>
     <loc>https://firer1946.github.io/categories/</loc>
     <lastmod>2021-12-21T12:38:00+08:00</lastmod>
@@ -44,8 +18,50 @@
                 href="https://firer1946.github.io/categories/"
                 />
   </url><url>
+    <loc>https://firer1946.github.io/</loc>
+    <lastmod>2021-12-21T12:38:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://firer1946.github.io/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://firer1946.github.io/"
+                />
+  </url><url>
+    <loc>https://firer1946.github.io/tags/hugo/</loc>
+    <lastmod>2021-12-21T12:38:00+08:00</lastmod>
+  </url><url>
     <loc>https://firer1946.github.io/post/2021/hugo%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2021-12-21T12:38:00+08:00</lastmod>
+  </url><url>
+    <loc>https://firer1946.github.io/post/</loc>
+    <lastmod>2021-12-21T12:38:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://firer1946.github.io/en/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://firer1946.github.io/post/"
+                />
+  </url><url>
+    <loc>https://firer1946.github.io/tags/</loc>
+    <lastmod>2021-12-21T12:38:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://firer1946.github.io/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://firer1946.github.io/tags/"
+                />
   </url><url>
     <loc>https://firer1946.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2021-12-21T12:38:00+08:00</lastmod>
@@ -63,11 +79,35 @@
                 href="https://firer1946.github.io/about/"
                 />
   </url><url>
+    <loc>https://firer1946.github.io/tags/hyper-v/</loc>
+    <lastmod>2021-01-22T16:21:00+08:00</lastmod>
+  </url><url>
     <loc>https://firer1946.github.io/post/2021/junk%E8%BD%AF%E4%BB%B6%E9%9A%94%E7%A6%BB%E8%AE%A1%E5%88%92/</loc>
     <lastmod>2021-01-22T16:21:00+08:00</lastmod>
   </url><url>
+    <loc>https://firer1946.github.io/tags/rdp/</loc>
+    <lastmod>2021-01-22T16:21:00+08:00</lastmod>
+  </url><url>
+    <loc>https://firer1946.github.io/tags/windows/</loc>
+    <lastmod>2021-01-22T16:21:00+08:00</lastmod>
+  </url><url>
+    <loc>https://firer1946.github.io/tags/pyinstaller/</loc>
+    <lastmod>2021-01-12T16:21:00+08:00</lastmod>
+  </url><url>
+    <loc>https://firer1946.github.io/tags/pyqt/</loc>
+    <lastmod>2021-01-12T16:21:00+08:00</lastmod>
+  </url><url>
     <loc>https://firer1946.github.io/post/2021/pyqt5-python%E6%89%93%E5%8C%85/</loc>
     <lastmod>2021-01-12T16:21:00+08:00</lastmod>
+  </url><url>
+    <loc>https://firer1946.github.io/tags/python/</loc>
+    <lastmod>2021-01-12T16:21:00+08:00</lastmod>
+  </url><url>
+    <loc>https://firer1946.github.io/tags/u%E7%9B%98%E5%90%AF%E5%8A%A8/</loc>
+    <lastmod>2021-01-06T16:21:00+08:00</lastmod>
+  </url><url>
+    <loc>https://firer1946.github.io/tags/ventoy/</loc>
+    <lastmod>2021-01-06T16:21:00+08:00</lastmod>
   </url><url>
     <loc>https://firer1946.github.io/post/2021/ventoy-iso%E5%90%AF%E5%8A%A8/</loc>
     <lastmod>2021-01-06T16:21:00+08:00</lastmod>
@@ -78,8 +118,23 @@
     <loc>https://firer1946.github.io/post/2021/calibre-web%E7%9A%84%E9%83%A8%E7%BD%B2/</loc>
     <lastmod>2021-01-04T16:21:00+08:00</lastmod>
   </url><url>
+    <loc>https://firer1946.github.io/tags/carlibre-web/</loc>
+    <lastmod>2021-01-04T16:21:00+08:00</lastmod>
+  </url><url>
+    <loc>https://firer1946.github.io/tags/docker/</loc>
+    <lastmod>2021-01-04T16:21:00+08:00</lastmod>
+  </url><url>
     <loc>https://firer1946.github.io/post/2021/start/</loc>
     <lastmod>2021-01-04T16:21:00+08:00</lastmod>
+  </url><url>
+    <loc>https://firer1946.github.io/tags/%E4%B9%A6%E7%B1%8D/</loc>
+    <lastmod>2021-01-04T16:21:00+08:00</lastmod>
+  </url><url>
+    <loc>https://firer1946.github.io/categories/%E8%87%AA%E5%A8%B1%E8%87%AA%E4%B9%90/</loc>
+    <lastmod>2021-01-04T16:21:00+08:00</lastmod>
+  </url><url>
+    <loc>https://firer1946.github.io/readme/</loc>
+    <priority>0</priority>
   </url><url>
     <loc>https://firer1946.github.io/archives/</loc>
     <xhtml:link
@@ -91,18 +146,6 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://firer1946.github.io/archives/"
-                />
-  </url><url>
-    <loc>https://firer1946.github.io/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://firer1946.github.io/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://firer1946.github.io/tags/"
                 />
   </url><url>
     <loc>https://firer1946.github.io/search/</loc>

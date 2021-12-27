@@ -8,6 +8,124 @@
       <url>https://firer1946.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://firer1946.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://firer1946.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 21 Dec 2021 12:38:00 +0800</lastBuildDate><atom:link href="https://firer1946.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>blog</title>
+      <link>https://firer1946.github.io/tags/blog/</link>
+      <pubDate>Tue, 21 Dec 2021 12:38:00 +0800</pubDate>
+      
+      <guid>https://firer1946.github.io/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://firer1946.github.io/tags/hugo/</link>
+      <pubDate>Tue, 21 Dec 2021 12:38:00 +0800</pubDate>
+      
+      <guid>https://firer1946.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hyper-v</title>
+      <link>https://firer1946.github.io/tags/hyper-v/</link>
+      <pubDate>Fri, 22 Jan 2021 16:21:00 +0800</pubDate>
+      
+      <guid>https://firer1946.github.io/tags/hyper-v/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rdp</title>
+      <link>https://firer1946.github.io/tags/rdp/</link>
+      <pubDate>Fri, 22 Jan 2021 16:21:00 +0800</pubDate>
+      
+      <guid>https://firer1946.github.io/tags/rdp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>windows</title>
+      <link>https://firer1946.github.io/tags/windows/</link>
+      <pubDate>Fri, 22 Jan 2021 16:21:00 +0800</pubDate>
+      
+      <guid>https://firer1946.github.io/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pyinstaller</title>
+      <link>https://firer1946.github.io/tags/pyinstaller/</link>
+      <pubDate>Tue, 12 Jan 2021 16:21:00 +0800</pubDate>
+      
+      <guid>https://firer1946.github.io/tags/pyinstaller/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pyqt</title>
+      <link>https://firer1946.github.io/tags/pyqt/</link>
+      <pubDate>Tue, 12 Jan 2021 16:21:00 +0800</pubDate>
+      
+      <guid>https://firer1946.github.io/tags/pyqt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://firer1946.github.io/tags/python/</link>
+      <pubDate>Tue, 12 Jan 2021 16:21:00 +0800</pubDate>
+      
+      <guid>https://firer1946.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>u盘启动</title>
+      <link>https://firer1946.github.io/tags/u%E7%9B%98%E5%90%AF%E5%8A%A8/</link>
+      <pubDate>Wed, 06 Jan 2021 16:21:00 +0800</pubDate>
+      
+      <guid>https://firer1946.github.io/tags/u%E7%9B%98%E5%90%AF%E5%8A%A8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ventoy</title>
+      <link>https://firer1946.github.io/tags/ventoy/</link>
+      <pubDate>Wed, 06 Jan 2021 16:21:00 +0800</pubDate>
+      
+      <guid>https://firer1946.github.io/tags/ventoy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>carlibre-web</title>
+      <link>https://firer1946.github.io/tags/carlibre-web/</link>
+      <pubDate>Mon, 04 Jan 2021 16:21:00 +0800</pubDate>
+      
+      <guid>https://firer1946.github.io/tags/carlibre-web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://firer1946.github.io/tags/docker/</link>
+      <pubDate>Mon, 04 Jan 2021 16:21:00 +0800</pubDate>
+      
+      <guid>https://firer1946.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>书籍</title>
+      <link>https://firer1946.github.io/tags/%E4%B9%A6%E7%B1%8D/</link>
+      <pubDate>Mon, 04 Jan 2021 16:21:00 +0800</pubDate>
+      
+      <guid>https://firer1946.github.io/tags/%E4%B9%A6%E7%B1%8D/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

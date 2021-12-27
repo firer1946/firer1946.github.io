@@ -67,6 +67,11 @@
 </a>
 </li>
 <li>
+<a href=https://firer1946.github.io/tags/ title=标签>
+<span>标签</span>
+</a>
+</li>
+<li>
 <a href=https://firer1946.github.io/about/ title=关于>
 <span>关于</span>
 </a>
@@ -75,20 +80,6 @@
 </nav>
 </header>
 <main class=main>
-<article class=post-entry>
-<header class=entry-header>
-<h2>超大量用户数据去重
-</h2>
-</header>
-<section class=entry-content>
-<p>之前统计系统到需要亿级的用户设备id去重，统计新增用户，直接使用clickhouse join由于笛卡尔积的原因导致效率偏低，早有听闻hbase rowkey的效率比较高，就想到了使用它来进行去重，把需要去重的键值连起来，每条数据查重理论上复杂度为1，当成一个比较大的redis来使用。
-使用起来效果非常惊人，Result[] get(List&lt;Get> var1) 这个函数提供了大量rowkey的查询，10万条数据几乎不到1s的时间，使用java进行求差集的效率也很不错，整体每天的数据批量去重只需要几秒钟就能完成
-如果时间差距过大，采取每天轮询的方式还是很不错的，保证每个批次的数据量不会太大，降低hbase的数据吞吐压力，曾经尝试每次查询200万的数据都是没有问题，只是数据传输的时间会长一些
-当然也可以用来redis来做这个处理，但是redis可能持久化存储这么多数据是一件比较麻烦的事情，而hbase本来就有海量存储的这个属性，不得不说比hive快了好多</p>
-</section>
-<footer class=entry-footer><span title="2021-01-06 16:21:00 +0800 CST">2021-01-06</span>&nbsp;·&nbsp;1 分钟&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to 超大量用户数据去重" href=https://firer1946.github.io/post/2021/%E8%B6%85%E5%A4%A7%E9%87%8F%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E5%8E%BB%E9%87%8D/></a>
-</article>
 <article class=post-entry>
 <header class=entry-header>
 <h2>calibre-web的部署

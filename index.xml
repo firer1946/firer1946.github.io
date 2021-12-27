@@ -9,17 +9,7 @@
       <link>https://firer1946.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 21 Dec 2021 17:32:00 +0800</lastBuildDate><atom:link href="https://firer1946.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>test</title>
-      <link>https://firer1946.github.io/post/2021/test/</link>
-      <pubDate>Tue, 21 Dec 2021 17:32:00 +0800</pubDate>
-      
-      <guid>https://firer1946.github.io/post/2021/test/</guid>
-      <description>obsidian测试
-   书籍 描述     百年孤独 (豆瓣) 小说   柏拉图对话录 短评 哲学   明朝那些事儿（1-9） (豆瓣) 历史   经济学原理 短评 经济   乌托邦 短评 哲学   克苏鲁神话 (豆瓣) 克苏鲁    </description>
-    </item>
-    
+    <lastBuildDate>Tue, 21 Dec 2021 12:38:00 +0800</lastBuildDate><atom:link href="https://firer1946.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo使用</title>
       <link>https://firer1946.github.io/post/2021/hugo%E4%BD%BF%E7%94%A8/</link>
@@ -115,6 +105,15 @@ version:&amp;#34;3&amp;#34;services:calibre-web:image:technosoft2000/calibre-web
       
       <guid>https://firer1946.github.io/post/2021/start/</guid>
       <description>2021，开始重新写blogs，简单记录一下，使用什么工具不重要，只要是快速开始写起来就很好，gridea还是比较方便的，相当于本地的静态站点生成器，同步到github pages 对应的仓库即可</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://firer1946.github.io/readme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://firer1946.github.io/readme/</guid>
+      <description>分类  技术 自娱自乐  </description>
     </item>
     
     
